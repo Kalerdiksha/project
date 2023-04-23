@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="stock">
+        
+        <div class="navbar"><div>
+            <img src="https://www.unluportfoy.com/assets/unlu_portfoy/upload/images/m/bull----bear-547.png" height="95px" width="250px"height="95px" width="250px">
+            <h2>Stock Analysis</h2></div>
+           
+            <div>
+
+                <div class='sign-in-up'>
+                    <button type='button' onclick="popup('login-popup')">LOGIN</button>
+                    <button type='button' onclick="popup('register-popup')">REGISTER</button>
+                  </div>
+                </header>
+              
+                <div class="popup-container" id="login-popup">
+                  <div class="popup">
+                    <form method="POST" action="login_register.php">
+                      <h2>
+                        <span>USER LOGIN</span>
+                        <button type="reset" onclick="popup('login-popup')">X</button>
+                      </h2>
+                      <input type="text" placeholder="E-mail or Username" name="email_username">
+                      <input type="password" placeholder="Password" name="password">
+                      <button type="submit" class="login-btn" name="login">LOGIN</button>
+                    </form>
+                  </div>
+                </div>
+              
+                <div class="popup-container" id="register-popup">
+                  <div class="register popup">
+                    <form method="POST" action="login_register.php">
+                      <h2>
+                        <span>USER REGISTER</span>
+                        <button type="reset" onclick="popup('register-popup')">X</button>
+                      </h2>
+                      <input type="text" placeholder="Full Name" name="fullname">
+                      <input type="text" placeholder="Username" name="username">
+                      <input type="email" placeholder="E-mail" name="email">
+                      <input type="password" placeholder="Password" name="password">
+                      <button type="submit" class="register-btn" name="register">REGISTER</button>
+                    </form>
+                  </div>
+                </div>
+              
+                <script>
+                  function popup(popup_name)
+                  {
+                    get_popup=document.getElementById(popup_name);
+                    if(get_popup.style.display=="flex")
+                    {
+                      get_popup.style.display="none";
+                    }
+                    else
+                    {
+                      get_popup.style.display="flex";
+                    }
+                  }
+                </script>
+              
+
+
+        </div>
+        <div class="content">
+            <big>Welcome To Stock Analysis</big>
+            <h1>Real time Stock Predictor </h1>
+            <button type="button"><a href="page.html">Explore More</a></button>
+        </div>
+        <div class="side-bar">
+            <img src="images/menu.png" class="menu">
+
+            <div class="social-links">
+                <img src="images/fb.png" alt="">
+                <img src="images/ig.png" alt="">
+                <img src="images/tw.png" alt="">
+            </div>
+
+            <div class="useful-links">
+                <img src="images/share.png" alt="">
+                <img src="images/info.png" alt="">
+
+            </div>
+        </div>
+
+        <div class="bubbles">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
